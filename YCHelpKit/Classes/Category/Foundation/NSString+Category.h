@@ -6,7 +6,6 @@
 //  Copyright (c) 2016年 yangc. All rights reserved.
 //
 
-#import <CommonCrypto/CommonDigest.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

@@ -6,6 +6,8 @@
 //  Copyright (c) 2016年 yangc. All rights reserved.
 //
 
+#import <CommonCrypto/CommonDigest.h>
+
 #import "NSString+Category.h"
 
 @implementation NSString (Category)
