@@ -15,6 +15,12 @@
 
 static const void *key_statusBarStyle = &key_statusBarStyle;
 
+@interface UIViewController ()
+
+@property (nonatomic, strong) NSNumber *statusBarStyle;
+
+@end
+
 @implementation UIViewController (Category)
 
 - (void)presentWebViewControllerWithURL:(NSURL *)URL animated:(BOOL)animated completion:(void (^)())completion {

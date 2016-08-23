@@ -18,8 +18,6 @@
 @interface UIViewController (Category)
 #endif
 
-@property (nonatomic, strong, readonly) NSNumber *statusBarStyle;
-
 - (void)presentWebViewControllerWithURL:(NSURL *)URL animated:(BOOL)animated completion:(void (^)())completion;
 
 @end
