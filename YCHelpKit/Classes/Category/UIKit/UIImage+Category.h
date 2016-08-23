@@ -21,6 +21,11 @@
 + (instancetype)imageWithColor:(UIColor *)color;
 
 /**
+ *  获取图片类型
+ */
++ (NSString *)imageTypeWithImageData:(NSData *)data;
+
+/**
  * 圆形图片
  */
 - (instancetype)imageWithCircle:(CGSize)size;

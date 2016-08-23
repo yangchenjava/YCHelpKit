@@ -36,7 +36,7 @@
 }
 
 - (void)textViewTextDidChangeNotification {
-    self.placeholderView.hidden = self.text.length;
+    self.placeholderView.hidden = self.hasText;
 }
 
 #pragma mark - 文本
