@@ -63,7 +63,7 @@
  * 圆形图片
  */
 - (instancetype)imageWithCircle:(CGSize)size {
-    return [self imageWithCircle:size borderWidth:5];
+    return [self imageWithCircle:size borderWidth:0];
 }
 
 - (instancetype)imageWithCircle:(CGSize)size borderWidth:(CGFloat)borderWidth {
@@ -96,7 +96,7 @@
  * 圆角图片
  */
 - (instancetype)imageWithRoundRect:(CGSize)size radius:(CGFloat)radius {
-    return [self imageWithRoundRect:size radius:radius borderWidth:5];
+    return [self imageWithRoundRect:size radius:radius borderWidth:0];
 }
 
 - (instancetype)imageWithRoundRect:(CGSize)size radius:(CGFloat)radius borderWidth:(CGFloat)borderWidth {
