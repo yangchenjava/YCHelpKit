@@ -68,6 +68,15 @@
           destination:(NSURL * (^)(NSURL *targetPath, NSHTTPURLResponse *response))destination
     completionHandler:(void (^)(NSHTTPURLResponse *response, NSURL *filePath, NSError *error))completionHandler;
 
+/**
+ *  @author yangc, 16-08-26 14:08:59
+ *
+ *  清除webview的cookie和cache
+ */
++ (void)clearWebViewCookieAndCache;
++ (void)clearWebViewCookie;
++ (void)clearWebViewCache;
+
 @end
 
 @interface YCAttachment : NSObject

@@ -167,6 +167,25 @@
     [downloadTask resume];
 }
 
++ (void)clearWebViewCookieAndCache {
+    [self clearWebViewCookie];
+    [self clearWebViewCache];
+}
+
++ (void)clearWebViewCookie {
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (NSHTTPCookie *cookie in storage.cookies) {
+        [storage deleteCookie:cookie];
+    }
+}
+
++ (void)clearWebViewCache {
+    NSURLCache *cache = [NSURLCache sharedURLCache];
+    [cache removeAllCachedResponses];
+    cache.diskCapacity = 0;
+    cache.memoryCapacity = 0;
+}
+
 @end
 
 @implementation YCAttachment

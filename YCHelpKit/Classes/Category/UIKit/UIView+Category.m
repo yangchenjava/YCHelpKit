@@ -70,4 +70,17 @@
     self.frame = frame;
 }
 
+- (UIViewController *)viewController {
+    UIViewController *viewController;
+    UIResponder *responder = self.nextResponder;
+    while (responder) {
+        if ([responder isKindOfClass:[UIViewController class]]) {
+            viewController = (UIViewController *) responder;
+            break;
+        }
+        responder = responder.nextResponder;
+    }
+    return viewController;
+}
+
 @end

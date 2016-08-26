@@ -17,4 +17,11 @@
 @property (nonatomic, assign) CGPoint origin;
 @property (nonatomic, assign) CGSize size;
 
+/**
+ *  @author yangc, 16-08-26 14:08:55
+ *
+ *  获取当前View所在的ViewController
+ */
+@property (nonatomic, strong, readonly) UIViewController *viewController;
+
 @end
