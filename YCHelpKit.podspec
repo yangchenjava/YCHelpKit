@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YCHelpKit"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "积累的工具"
 
   s.description  = <<-DESC

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F2739881D75868000E66C47 /* UIAlertController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2739871D75868000E66C47 /* UIAlertController+Category.m */; };
 		0FDAAC921D649EEE007FE68C /* NSMutableArray+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAAC4C1D649EEE007FE68C /* NSMutableArray+Category.m */; };
 		0FDAAC931D649EEE007FE68C /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAAC4E1D649EEE007FE68C /* NSString+Category.m */; };
 		0FDAAC941D649EEE007FE68C /* UIBarButtonItem+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAAC511D649EEE007FE68C /* UIBarButtonItem+Category.m */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F2739861D75868000E66C47 /* UIAlertController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Category.h"; sourceTree = "<group>"; };
+		0F2739871D75868000E66C47 /* UIAlertController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Category.m"; sourceTree = "<group>"; };
 		0FDAAC2E1D649DC8007FE68C /* YCHelpKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YCHelpKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDAAC4B1D649EEE007FE68C /* NSMutableArray+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Category.h"; sourceTree = "<group>"; };
 		0FDAAC4C1D649EEE007FE68C /* NSMutableArray+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Category.m"; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 		0FDAAC4F1D649EEE007FE68C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				0F2739861D75868000E66C47 /* UIAlertController+Category.h */,
+				0F2739871D75868000E66C47 /* UIAlertController+Category.m */,
 				0FDAAC501D649EEE007FE68C /* UIBarButtonItem+Category.h */,
 				0FDAAC511D649EEE007FE68C /* UIBarButtonItem+Category.m */,
 				0FDAAC521D649EEE007FE68C /* UIImage+Category.h */,
@@ -488,6 +493,7 @@
 				0FDAACAD1D649EEE007FE68C /* YCHttpUtils.m in Sources */,
 				0FDAACA01D649EEE007FE68C /* SVModalWebViewController.m in Sources */,
 				0FDAACA21D649EEE007FE68C /* SVWebViewController.m in Sources */,
+				0F2739881D75868000E66C47 /* UIAlertController+Category.m in Sources */,
 				0FDAAC971D649EEE007FE68C /* UITextViewWithPlaceholder.m in Sources */,
 				0FDAAC931D649EEE007FE68C /* NSString+Category.m in Sources */,
 				0FDAAC9B1D649EEE007FE68C /* MBProgressHUD+Category.m in Sources */,

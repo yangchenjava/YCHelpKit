@@ -21,8 +21,6 @@
          params:(NSDictionary *)params
         success:(void (^)(NSHTTPURLResponse *, id))success
         failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     if (headers.count) {
@@ -37,13 +35,11 @@
             if (success) {
                 success((NSHTTPURLResponse *) task.response, responseObject);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
         failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
             if (failure) {
                 failure((NSHTTPURLResponse *) task.response, error);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }];
 }
 
@@ -56,8 +52,6 @@
           params:(NSDictionary *)params
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     if (headers.count) {
@@ -72,13 +66,11 @@
             if (success) {
                 success((NSHTTPURLResponse *) task.response, responseObject);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
         failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
             if (failure) {
                 failure((NSHTTPURLResponse *) task.response, error);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }];
 }
 
@@ -96,8 +88,6 @@
  attachmentArray:(NSArray *)attachmentArray
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     if (headers.count) {
@@ -117,13 +107,11 @@
             if (success) {
                 success((NSHTTPURLResponse *) task.response, responseObject);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }
         failure:^(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error) {
             if (failure) {
                 failure((NSHTTPURLResponse *) task.response, error);
             }
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }];
 }
 
@@ -139,8 +127,6 @@
              progress:(void (^)(NSProgress *downProgress))progress
           destination:(NSURL * (^)(NSURL *targetPath, NSHTTPURLResponse *response))destination
     completionHandler:(void (^)(NSHTTPURLResponse *response, NSURL *filePath, NSError *error))completionHandler {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
 
@@ -162,7 +148,6 @@
         }
         completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
             completionHandler((NSHTTPURLResponse *) response, filePath, error);
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         }];
     [downloadTask resume];
 }
