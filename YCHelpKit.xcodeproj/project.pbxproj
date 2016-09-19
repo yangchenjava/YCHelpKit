@@ -38,7 +38,6 @@
 		0FDAACAD1D649EEE007FE68C /* YCHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAAC8F1D649EEE007FE68C /* YCHttpUtils.m */; };
 		0FDAACAE1D649EEE007FE68C /* YCNumberUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAAC911D649EEE007FE68C /* YCNumberUtils.m */; };
 		0FDAACB31D649EF6007FE68C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAACB01D649EF6007FE68C /* AppDelegate.m */; };
-		0FDAACB41D649EF6007FE68C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FDAACB11D649EF6007FE68C /* Info.plist */; };
 		0FDAACB51D649EF6007FE68C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDAACB21D649EF6007FE68C /* main.m */; };
 		7DCD74D0DE4519729276320E /* Pods_YCHelpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7FE47E9CDC1577E6B9C9A4 /* Pods_YCHelpKit.framework */; };
 /* End PBXBuildFile section */
@@ -108,7 +107,6 @@
 		0FDAAC911D649EEE007FE68C /* YCNumberUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNumberUtils.m; sourceTree = "<group>"; };
 		0FDAACAF1D649EF6007FE68C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FDAACB01D649EF6007FE68C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0FDAACB11D649EF6007FE68C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FDAACB21D649EF6007FE68C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EB7FE47E9CDC1577E6B9C9A4 /* Pods_YCHelpKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YCHelpKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F173FCCBD7DB591BA6F7C3C1 /* Pods-YCHelpKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YCHelpKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YCHelpKit/Pods-YCHelpKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				0FDAACAF1D649EF6007FE68C /* AppDelegate.h */,
 				0FDAACB01D649EF6007FE68C /* AppDelegate.m */,
 				0FDAACB21D649EF6007FE68C /* main.m */,
-				0FDAACB11D649EF6007FE68C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -423,7 +420,6 @@
 				0FDAACA71D649EEE007FE68C /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				0FDAACA61D649EEE007FE68C /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				0FDAACA81D649EEE007FE68C /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
-				0FDAACB41D649EF6007FE68C /* Info.plist in Resources */,
 				0FDAACA11D649EEE007FE68C /* SVWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
