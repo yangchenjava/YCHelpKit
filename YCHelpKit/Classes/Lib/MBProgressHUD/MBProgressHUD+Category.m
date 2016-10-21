@@ -32,11 +32,12 @@
         view = [UIApplication sharedApplication].windows.lastObject;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.dimBackground = YES;
+    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
-    hud.labelText = message;
+    hud.label.text = message;
     hud.mode = MBProgressHUDModeCustomView;
-    [hud hide:YES afterDelay:1];
+    [hud hideAnimated:YES afterDelay:1];
 }
 
 #pragma mark - 显示消息，带返回值
@@ -48,8 +49,9 @@
         view = [UIApplication sharedApplication].windows.lastObject;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
-    hud.dimBackground = YES;
-    hud.labelText = message;
+    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
+    hud.label.text = message;
     return hud;
 }
 
