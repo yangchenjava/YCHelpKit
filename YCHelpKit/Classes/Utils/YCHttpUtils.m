@@ -127,8 +127,7 @@
              progress:(void (^)(NSProgress *downProgress))progress
           destination:(NSURL * (^)(NSURL *targetPath, NSHTTPURLResponse *response))destination
     completionHandler:(void (^)(NSHTTPURLResponse *response, NSURL *filePath, NSError *error))completionHandler {
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     if (headers.count) {
