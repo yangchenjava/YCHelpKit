@@ -23,6 +23,7 @@
         failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
@@ -54,6 +55,7 @@
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
@@ -90,6 +92,7 @@
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
