@@ -22,6 +22,10 @@
         success:(void (^)(NSHTTPURLResponse *, id))success
         failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 10;
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
@@ -54,6 +58,10 @@
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer.timeoutInterval = 10;
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
@@ -91,6 +99,7 @@
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 10;
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     if (headers.count) {
