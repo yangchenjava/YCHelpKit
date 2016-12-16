@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-static const int START_YEAR = 1901;
-static const int END_YEAR = 2050;
+static int const START_YEAR = 1901;
+static int const END_YEAR = 2050;
 
 @interface YCChineseCalendar : NSObject
 

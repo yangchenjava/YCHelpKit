@@ -240,7 +240,8 @@ static NSString *const _chineseTermNames[] = {
 
 + (NSString *)festivalNameWithDate:(NSString *)date {
     static NSDictionary *dict;
-    if (!dict) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         dict = @{
             @"0101" : @"元旦",
             @"0214" : @"情人节",
@@ -265,7 +266,7 @@ static NSString *const _chineseTermNames[] = {
             @"十二月初八" : @"腊八",
             @"十二月廿三" : @"小年"
         };
-    }
+    });
     return [dict objectForKey:date];
 }
 
