@@ -31,7 +31,7 @@
     if (view == nil) {
         view = [UIApplication sharedApplication].windows.lastObject;
     }
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
@@ -48,7 +48,7 @@
     if (view == nil) {
         view = [UIApplication sharedApplication].windows.lastObject;
     }
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
     hud.label.text = message;

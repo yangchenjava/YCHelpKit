@@ -16,7 +16,7 @@
     [button setBackgroundImage:[UIImage imageNamed:highlightedImageName] forState:UIControlStateHighlighted];
     [button sizeToFit];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[UIBarButtonItem alloc] initWithCustomView:button];
+    return [[self alloc] initWithCustomView:button];
 }
 
 + (instancetype)barButtonItemWithSize:(CGSize)size imageName:(NSString *)imageName highlightedImageName:(NSString *)highlightedImageName target:(id)target action:(SEL)action {
@@ -25,7 +25,7 @@
     [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     [button setBackgroundImage:[UIImage imageNamed:highlightedImageName] forState:UIControlStateHighlighted];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[UIBarButtonItem alloc] initWithCustomView:button];
+    return [[self alloc] initWithCustomView:button];
 }
 
 + (instancetype)barButtonItemWithSize:(CGSize)size title:(NSString *)title font:(UIFont *)font color:(UIColor *)color highlightedColor:(UIColor *)highlightedColor target:(id)target action:(SEL)action {
@@ -41,7 +41,7 @@
     [button setTitleColor:highlightedColor forState:UIControlStateHighlighted];
     [button setTitleColor:disabledColor forState:UIControlStateDisabled];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    return [[UIBarButtonItem alloc] initWithCustomView:button];
+    return [[self alloc] initWithCustomView:button];
 }
 
 @end

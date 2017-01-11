@@ -12,7 +12,7 @@
 @implementation UITextField (Category)
 
 + (instancetype)textFieldForSearchBarWithFrame:(CGRect)frame icon:(NSString *)icon placeholder:(NSString *)placeholder {
-    UITextField *searchBar = [[UITextField alloc] initWithFrame:frame];
+    UITextField *searchBar = [[self alloc] initWithFrame:frame];
     searchBar.font = [UIFont systemFontOfSize:15];
     searchBar.background = [UIImage imageNamedForResize:@"search_navigationbar_textfield_background"];
     searchBar.placeholder = placeholder;
