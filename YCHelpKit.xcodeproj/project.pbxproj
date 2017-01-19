@@ -38,7 +38,6 @@
 		0FE3FA021E305D200046FE00 /* YCHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9E31E305D200046FE00 /* YCHttpUtils.m */; };
 		0FE3FA031E305D200046FE00 /* YCNumberUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9E51E305D200046FE00 /* YCNumberUtils.m */; };
 		0FE3FA091E305D350046FE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3FA061E305D350046FE00 /* AppDelegate.m */; };
-		0FE3FA0A1E305D350046FE00 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FE3FA071E305D350046FE00 /* Info.plist */; };
 		0FE3FA0B1E305D350046FE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3FA081E305D350046FE00 /* main.m */; };
 		7DCD74D0DE4519729276320E /* Pods_YCHelpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7FE47E9CDC1577E6B9C9A4 /* Pods_YCHelpKit.framework */; };
 /* End PBXBuildFile section */
@@ -416,7 +415,6 @@
 				0FE3F9FC1E305D200046FE00 /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				0FE3F9FB1E305D200046FE00 /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				0FE3F9FD1E305D200046FE00 /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
-				0FE3FA0A1E305D350046FE00 /* Info.plist in Resources */,
 				0FE3F9F61E305D200046FE00 /* SVWebViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
