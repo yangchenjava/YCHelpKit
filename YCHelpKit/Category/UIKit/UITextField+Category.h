@@ -10,6 +10,8 @@
 
 @interface UITextField (Category)
 
-+ (instancetype)textFieldForSearchBarWithFrame:(CGRect)frame icon:(NSString *)icon placeholder:(NSString *)placeholder;
+@property (nonatomic, strong) UIColor *placeholderColor;
+
++ (instancetype)textFieldForSearchBarWithFrame:(CGRect)frame placeholder:(NSString *)placeholder background:(NSString *)background icon:(NSString *)icon;
 
 @end
