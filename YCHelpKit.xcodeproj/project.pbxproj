@@ -36,7 +36,6 @@
 		0FE3FA001E305D200046FE00 /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9DC1E305D200046FE00 /* SVWebViewControllerActivity.m */; };
 		0FE3FA011E305D200046FE00 /* YCChineseCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9E11E305D200046FE00 /* YCChineseCalendar.m */; };
 		0FE3FA021E305D200046FE00 /* YCHttpUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9E31E305D200046FE00 /* YCHttpUtils.m */; };
-		0FE3FA031E305D200046FE00 /* YCNumberUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9E51E305D200046FE00 /* YCNumberUtils.m */; };
 		0FE3FA091E305D350046FE00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3FA061E305D350046FE00 /* AppDelegate.m */; };
 		0FE3FA0B1E305D350046FE00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3FA081E305D350046FE00 /* main.m */; };
 		7DCD74D0DE4519729276320E /* Pods_YCHelpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB7FE47E9CDC1577E6B9C9A4 /* Pods_YCHelpKit.framework */; };
@@ -103,8 +102,6 @@
 		0FE3F9E11E305D200046FE00 /* YCChineseCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCChineseCalendar.m; sourceTree = "<group>"; };
 		0FE3F9E21E305D200046FE00 /* YCHttpUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCHttpUtils.h; sourceTree = "<group>"; };
 		0FE3F9E31E305D200046FE00 /* YCHttpUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHttpUtils.m; sourceTree = "<group>"; };
-		0FE3F9E41E305D200046FE00 /* YCNumberUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YCNumberUtils.h; sourceTree = "<group>"; };
-		0FE3F9E51E305D200046FE00 /* YCNumberUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCNumberUtils.m; sourceTree = "<group>"; };
 		0FE3FA051E305D350046FE00 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FE3FA061E305D350046FE00 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0FE3FA071E305D350046FE00 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -302,8 +299,6 @@
 				0FE3F9E11E305D200046FE00 /* YCChineseCalendar.m */,
 				0FE3F9E21E305D200046FE00 /* YCHttpUtils.h */,
 				0FE3F9E31E305D200046FE00 /* YCHttpUtils.m */,
-				0FE3F9E41E305D200046FE00 /* YCNumberUtils.h */,
-				0FE3F9E51E305D200046FE00 /* YCNumberUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -478,7 +473,6 @@
 				0FE3F9E91E305D200046FE00 /* UIBarButtonItem+Category.m in Sources */,
 				0FE3F9F71E305D200046FE00 /* SVWebViewController.m in Sources */,
 				0FE3F9F01E305D200046FE00 /* MBProgressHUD+Category.m in Sources */,
-				0FE3FA031E305D200046FE00 /* YCNumberUtils.m in Sources */,
 				0FE3F9E81E305D200046FE00 /* UIAlertController+Category.m in Sources */,
 				0FE3F9FE1E305D200046FE00 /* SVWebViewControllerActivitySafari.m in Sources */,
 				0FE3FA021E305D200046FE00 /* YCHttpUtils.m in Sources */,

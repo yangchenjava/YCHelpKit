@@ -15,4 +15,8 @@
 
 - (NSString *)md5String;
 
+- (unsigned long long)fileSize;
+
++ (NSString *)fileSizeUnit:(unsigned long long)fileSize;
+
 @end
