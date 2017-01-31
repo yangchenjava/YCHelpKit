@@ -33,7 +33,7 @@
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [manager GET:URLString
+    [manager GET:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
         parameters:params
         progress:nil
         success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
@@ -69,7 +69,7 @@
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [manager POST:URLString
+    [manager POST:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
         parameters:params
         progress:nil
         success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
@@ -107,7 +107,7 @@
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
         }];
     }
-    [manager POST:URLString
+    [manager POST:[URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
         parameters:params
         constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
             for (YCAttachment *attachment in attachmentArray) {
@@ -141,6 +141,7 @@
     completionHandler:(void (^)(NSHTTPURLResponse *response, NSURL *filePath, NSError *error))completionHandler {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 
+    URLString = [URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
