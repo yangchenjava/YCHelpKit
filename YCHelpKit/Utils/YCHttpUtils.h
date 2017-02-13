@@ -11,6 +11,11 @@
 @interface YCHttpUtils : NSObject
 
 /**
+ *  取消HTTP请求
+ */
++ (void)cancelHttpRequest;
+
+/**
  *  GET请求
  */
 + (void)sendGet:(NSString *)URLString

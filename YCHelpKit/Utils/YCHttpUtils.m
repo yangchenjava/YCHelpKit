@@ -12,6 +12,33 @@
 
 @implementation YCHttpUtils
 
++ (AFHTTPSessionManager *)manager {
+    static AFHTTPSessionManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [AFHTTPSessionManager manager];
+    });
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    manager.requestSerializer.timeoutInterval = 10;
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    
+    for (NSString *key in manager.requestSerializer.HTTPRequestHeaders.allKeys) {
+        [manager.requestSerializer setValue:nil forHTTPHeaderField:key];
+    }
+    
+    return manager;
+}
+
++ (void)cancelHttpRequest {
+    AFHTTPSessionManager *manager = [self manager];
+    [manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+}
+
 + (void)sendGet:(NSString *)URLString params:(NSDictionary *)params success:(void (^)(NSHTTPURLResponse *, id))success failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
     [self sendGet:URLString headers:nil params:params success:success failure:failure];
 }
@@ -21,13 +48,7 @@
          params:(NSDictionary *)params
         success:(void (^)(NSHTTPURLResponse *, id))success
         failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.requestSerializer.timeoutInterval = 10;
-    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    AFHTTPSessionManager *manager = [self manager];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
@@ -57,13 +78,7 @@
           params:(NSDictionary *)params
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.requestSerializer.timeoutInterval = 10;
-    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    AFHTTPSessionManager *manager = [self manager];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
@@ -98,10 +113,8 @@
  attachmentArray:(NSArray *)attachmentArray
          success:(void (^)(NSHTTPURLResponse *, id))success
          failure:(void (^)(NSHTTPURLResponse *, NSError *))failure {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer.timeoutInterval = 10;
-    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
+    AFHTTPSessionManager *manager = [self manager];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     if (headers.count) {
         [headers enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *obj, BOOL *stop) {
             [manager.requestSerializer setValue:obj forHTTPHeaderField:key];
