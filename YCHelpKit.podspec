@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YCHelpKit"
-  s.version      = "1.2.9"
+  s.version      = "1.2.10"
   s.summary      = "工作中积累的工具"
 
   s.homepage     = "https://github.com/yangchenjava/YCHelpKit"
@@ -16,7 +16,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework    = "UIKit"
   s.dependency "AFNetworking", "~> 3.0"
-  s.dependency "Mantle", "2.1.0"
   s.dependency "MBProgressHUD", "1.0.0"
   s.dependency "SDWebImage", "3.8.2"
 

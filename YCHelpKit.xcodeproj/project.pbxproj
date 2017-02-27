@@ -16,7 +16,6 @@
 		0FE3F9EC1E305D200046FE00 /* UITextViewWithPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9AB1E305D200046FE00 /* UITextViewWithPlaceholder.m */; };
 		0FE3F9ED1E305D200046FE00 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9AD1E305D200046FE00 /* UIView+Category.m */; };
 		0FE3F9EE1E305D200046FE00 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9AF1E305D200046FE00 /* UIViewController+Category.m */; };
-		0FE3F9EF1E305D200046FE00 /* MTLJSONAdapterWithoutNil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9B31E305D200046FE00 /* MTLJSONAdapterWithoutNil.m */; };
 		0FE3F9F01E305D200046FE00 /* MBProgressHUD+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9B61E305D200046FE00 /* MBProgressHUD+Category.m */; };
 		0FE3F9F11E305D200046FE00 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0FE3F9B71E305D200046FE00 /* MBProgressHUD.bundle */; };
 		0FE3F9F21E305D200046FE00 /* NSString+Emojize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FE3F9BB1E305D200046FE00 /* NSString+Emojize.m */; };
@@ -61,8 +60,6 @@
 		0FE3F9AD1E305D200046FE00 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
 		0FE3F9AE1E305D200046FE00 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		0FE3F9AF1E305D200046FE00 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
-		0FE3F9B21E305D200046FE00 /* MTLJSONAdapterWithoutNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTLJSONAdapterWithoutNil.h; sourceTree = "<group>"; };
-		0FE3F9B31E305D200046FE00 /* MTLJSONAdapterWithoutNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTLJSONAdapterWithoutNil.m; sourceTree = "<group>"; };
 		0FE3F9B51E305D200046FE00 /* MBProgressHUD+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Category.h"; sourceTree = "<group>"; };
 		0FE3F9B61E305D200046FE00 /* MBProgressHUD+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Category.m"; sourceTree = "<group>"; };
 		0FE3F9B71E305D200046FE00 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -196,22 +193,12 @@
 		0FE3F9B01E305D200046FE00 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				0FE3F9B11E305D200046FE00 /* Mantle */,
 				0FE3F9B41E305D200046FE00 /* MBProgressHUD */,
 				0FE3F9B81E305D200046FE00 /* NSStringEmojize */,
 				0FE3F9BC1E305D200046FE00 /* SDWebImage */,
 				0FE3F9BF1E305D200046FE00 /* SVWebViewController */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		0FE3F9B11E305D200046FE00 /* Mantle */ = {
-			isa = PBXGroup;
-			children = (
-				0FE3F9B21E305D200046FE00 /* MTLJSONAdapterWithoutNil.h */,
-				0FE3F9B31E305D200046FE00 /* MTLJSONAdapterWithoutNil.m */,
-			);
-			path = Mantle;
 			sourceTree = "<group>";
 		};
 		0FE3F9B41E305D200046FE00 /* MBProgressHUD */ = {
@@ -479,7 +466,6 @@
 				0FE3F9E61E305D200046FE00 /* NSMutableArray+Category.m in Sources */,
 				0FE3F9E71E305D200046FE00 /* NSString+Category.m in Sources */,
 				0FE3FA0B1E305D350046FE00 /* main.m in Sources */,
-				0FE3F9EF1E305D200046FE00 /* MTLJSONAdapterWithoutNil.m in Sources */,
 				0FE3F9FA1E305D200046FE00 /* SVWebViewControllerActivityChrome.m in Sources */,
 				0FE3F9EE1E305D200046FE00 /* UIViewController+Category.m in Sources */,
 				0FE3F9F21E305D200046FE00 /* NSString+Emojize.m in Sources */,
