@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YCHelpKit"
-  s.version      = "1.2.10"
+  s.version      = "1.2.11"
   s.summary      = "工作中积累的工具"
 
   s.homepage     = "https://github.com/yangchenjava/YCHelpKit"

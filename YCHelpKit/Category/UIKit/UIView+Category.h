@@ -24,4 +24,11 @@
  */
 @property (nonatomic, strong, readonly) UIViewController *viewController;
 
+/**
+ *  @author yangc, 16-08-26 14:08:55
+ *
+ *  加载名称为当前类名的xib文件
+ */
++ (instancetype)viewFromNib;
+
 @end
