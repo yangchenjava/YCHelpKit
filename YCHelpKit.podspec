@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework    = "UIKit"
   s.dependency "AFNetworking", "~> 3.0"
-  s.dependency "MBProgressHUD", "1.0.0"
-  s.dependency "SDWebImage", "3.8.2"
+  s.dependency "MBProgressHUD", "~> 1.0"
+  s.dependency "SDWebImage", "~> 4.0"
 
 end
