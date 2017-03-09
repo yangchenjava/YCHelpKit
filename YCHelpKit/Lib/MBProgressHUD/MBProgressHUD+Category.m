@@ -7,6 +7,7 @@
 //
 
 #import "MBProgressHUD+Category.h"
+#import "YCHttpUtils.h"
 
 @implementation MBProgressHUD (Category)
 
@@ -15,7 +16,7 @@
     [self showSuccess:success toView:nil];
 }
 + (void)showSuccess:(NSString *)success toView:(UIView *)view {
-    [self showSuccessOrError:@"MBProgressHUD.bundle/success" message:success toView:view];
+    [self showSuccessOrError:@"MBProgressHUD.bundle/success.png" message:success toView:view];
 }
 
 #pragma mark - 显示失败
@@ -23,7 +24,7 @@
     [self showError:error toView:nil];
 }
 + (void)showError:(NSString *)error toView:(UIView *)view {
-    [self showSuccessOrError:@"MBProgressHUD.bundle/error" message:error toView:view];
+    [self showSuccessOrError:@"MBProgressHUD.bundle/error.png" message:error toView:view];
 }
 
 #pragma mark - 显示成功或失败
@@ -34,7 +35,8 @@
     MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
-    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
+    UIImage *image = [UIImage imageNamed:icon inBundle:[NSBundle bundleForClass:[YCHttpUtils class]] compatibleWithTraitCollection:nil];
+    hud.customView = [[UIImageView alloc] initWithImage:image];
     hud.label.text = message;
     hud.mode = MBProgressHUDModeCustomView;
     [hud hideAnimated:YES afterDelay:1];
