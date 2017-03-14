@@ -21,9 +21,9 @@
 + (void)showError:(NSString *)error toView:(UIView *)view;
 
 /** 显示消息，带返回值 */
-+ (MBProgressHUD *)showMessage:(NSString *)message;
++ (MBProgressHUD *)showMessage:(NSString *)message mask:(BOOL)mask;
 /** 显示消息，带返回值 */
-+ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view;
++ (MBProgressHUD *)showMessage:(NSString *)message mask:(BOOL)mask toView:(UIView *)view;
 
 /** 隐藏(移除) */
 + (void)hideHUD;

@@ -33,27 +33,35 @@
         view = [UIApplication sharedApplication].windows.lastObject;
     }
     MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeCustomView;
+    hud.removeFromSuperViewOnHide = YES;
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
     UIImage *image = [UIImage imageNamed:icon inBundle:[NSBundle bundleForClass:[YCHttpUtils class]] compatibleWithTraitCollection:nil];
     hud.customView = [[UIImageView alloc] initWithImage:image];
     hud.label.text = message;
-    hud.mode = MBProgressHUDModeCustomView;
     [hud hideAnimated:YES afterDelay:1];
 }
 
 #pragma mark - 显示消息，带返回值
-+ (MBProgressHUD *)showMessage:(NSString *)message {
-    return [self showMessage:message toView:nil];
++ (MBProgressHUD *)showMessage:(NSString *)message mask:(BOOL)mask {
+    return [self showMessage:message mask:mask toView:nil];
 }
-+ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view {
++ (MBProgressHUD *)showMessage:(NSString *)message mask:(BOOL)mask toView:(UIView *)view {
     if (view == nil) {
         view = [UIApplication sharedApplication].windows.lastObject;
     }
     MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
+    hud.removeFromSuperViewOnHide = YES;
     hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
     hud.label.text = message;
+    if (mask) {
+        hud.backgroundView.color = [UIColor colorWithWhite:0.f alpha:.2f];
+        hud.userInteractionEnabled = YES;
+    } else {
+        hud.backgroundView.color = [UIColor clearColor];
+        hud.userInteractionEnabled = NO;
+    }
     return hud;
 }
 
