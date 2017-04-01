@@ -87,4 +87,10 @@
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
 }
 
+- (BOOL)viewIntersectsView:(UIView *)view {
+    CGRect rect1 = [self convertRect:self.bounds toView:nil];
+    CGRect rect2 = [view convertRect:view.bounds toView:nil];
+    return CGRectIntersectsRect(rect1, rect2);
+}
+
 @end

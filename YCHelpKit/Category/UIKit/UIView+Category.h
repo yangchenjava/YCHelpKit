@@ -31,4 +31,12 @@
  */
 + (instancetype)viewFromNib;
 
+
+/**
+ *  @author yangc, 16-08-26 14:08:55
+ *
+ *  判断是否与指定的view有视觉上的交叉或者重合
+ */
+- (BOOL)viewIntersectsView:(UIView *)view;
+
 @end
