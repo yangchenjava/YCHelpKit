@@ -88,8 +88,9 @@
 }
 
 - (BOOL)viewIntersectsView:(UIView *)view {
-    CGRect rect1 = [self convertRect:self.bounds toView:nil];
-    CGRect rect2 = [view convertRect:view.bounds toView:nil];
+    UIView *window = [UIApplication sharedApplication].keyWindow;
+    CGRect rect1 = [self convertRect:self.bounds toView:window];
+    CGRect rect2 = [view convertRect:view.bounds toView:window];
     return CGRectIntersectsRect(rect1, rect2);
 }
 
