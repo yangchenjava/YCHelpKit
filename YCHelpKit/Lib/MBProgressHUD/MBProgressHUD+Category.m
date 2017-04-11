@@ -30,7 +30,7 @@
 #pragma mark - 显示成功或失败
 + (void)showSuccessOrError:(NSString *)icon message:(NSString *)message toView:(UIView *)view {
     if (view == nil) {
-        view = [UIApplication sharedApplication].windows.lastObject;
+        view = [UIApplication sharedApplication].keyWindow;
     }
     MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeCustomView;
@@ -49,7 +49,7 @@
 }
 + (MBProgressHUD *)showMessage:(NSString *)message mask:(BOOL)mask toView:(UIView *)view {
     if (view == nil) {
-        view = [UIApplication sharedApplication].windows.lastObject;
+        view = [UIApplication sharedApplication].keyWindow;
     }
     MBProgressHUD *hud = [self showHUDAddedTo:view animated:YES];
     hud.removeFromSuperViewOnHide = YES;
@@ -71,7 +71,7 @@
 }
 + (void)hideHUDForView:(UIView *)view {
     if (view == nil) {
-        view = [UIApplication sharedApplication].windows.lastObject;
+        view = [UIApplication sharedApplication].keyWindow;
     }
     [MBProgressHUD hideHUDForView:view animated:YES];
 }
