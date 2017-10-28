@@ -27,10 +27,6 @@
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     
-    for (NSString *key in manager.requestSerializer.HTTPRequestHeaders.allKeys) {
-        [manager.requestSerializer setValue:nil forHTTPHeaderField:key];
-    }
-    
     return manager;
 }
 

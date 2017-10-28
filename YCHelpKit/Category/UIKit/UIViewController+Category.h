@@ -18,6 +18,6 @@
 @interface UIViewController (Category)
 #endif
 
-- (void)presentWebViewControllerWithURL:(NSURL *)URL animated:(BOOL)animated completion:(void (^)())completion;
+- (void)presentWebViewControllerWithURL:(NSURL *)URL animated:(BOOL)animated completion:(void (^)(void))completion;
 
 @end
