@@ -24,6 +24,8 @@ static const void *key_statusBarStyle = &key_statusBarStyle;
 @implementation UIViewController (Category)
 
 - (void)presentWebViewControllerWithURL:(NSURL *)URL animated:(BOOL)animated completion:(void (^)(void))completion {
+    if (![URL.absoluteString hasPrefix:@"http"]) return;
+    
     UIViewController *vc;
     if (iOS9) {
         self.statusBarStyle = @([UIApplication sharedApplication].statusBarStyle);
