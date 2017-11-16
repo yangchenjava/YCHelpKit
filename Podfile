@@ -4,6 +4,6 @@ use_frameworks!
 
 target "YCHelpKit" do
     pod 'AFNetworking', '~> 3.1'
-    pod 'MBProgressHUD', '~> 1.0'
+    pod 'MBProgressHUD', '~> 1.1'
     pod 'SDWebImage', '~> 4.0'
 end
