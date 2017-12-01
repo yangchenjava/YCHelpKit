@@ -26,7 +26,7 @@
     } else {
         [self sd_setImageWithURL:url placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             if (!error) {
-                UIImage *newImage = [image imageWithCircle:image.size];
+                UIImage *newImage = [image imageWithCircle:CGSizeMake(self.bounds.size.width * 3, self.bounds.size.height * 3)];
                 self.image = newImage;
                 [[SDImageCache sharedImageCache] storeImage:newImage forKey:key completion:nil];
                 [[SDImageCache sharedImageCache] removeImageForKey:url.absoluteString withCompletion:nil];
@@ -50,7 +50,7 @@
         } else {
             [self sd_setImageWithURL:url placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
                 if (!error) {
-                    UIImage *newImage = [image imageWithRoundRect:image.size radius:radius];
+                    UIImage *newImage = [image imageWithRoundRect:CGSizeMake(self.bounds.size.width * 3, self.bounds.size.height * 3) radius:radius];
                     self.image = newImage;
                     [[SDImageCache sharedImageCache] storeImage:newImage forKey:key completion:nil];
                     [[SDImageCache sharedImageCache] removeImageForKey:url.absoluteString withCompletion:nil];
